@@ -1,0 +1,77 @@
+/*Mobile version (mobile first)*/
+* {
+	box-sizing: border-box;
+	margin: 0; padding: 0; border: 0;
+	border-style: solid;
+	border-color: black;
+}
+
+body > div {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+h1 {
+	text-align: center;
+}
+
+div > div { 
+	width: 100%;
+	float: left;
+	padding: 40px;
+ }
+
+div > div > div { 
+	position: relative;
+	padding: 40px;
+	border-width: 1px;
+	width: 100%;
+	min-width: 150px;
+ }
+
+div > h2 {
+	position: relative;
+	right: -40px;
+	top: -40px;
+	float: right;
+	margin: 0px;
+	width: auto;
+	text-align: center;
+	padding: 20px;
+	border-width: 0px 0px 1px 1px;/*Don't double up width on adjacent borders*/
+}
+
+div > p {
+	font-size: 1.3em;
+	clear: both;
+}
+
+#mobileHeader {
+	background-color: pink;
+}
+
+#tabletHeader {
+	background-color: lightgreen;
+}
+
+#desktopHeader {
+	background-color: lightblue;
+}
+
+/* Tablet version */
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	div > div {
+		width: 50%;
+	}
+	div > div:nth-child(3) {
+		width: 100%;
+	}
+}
+
+/* Desktop version */
+@media (min-width: 992px) {
+	div > div {
+		width: 33%;
+	}
+}
